@@ -55,7 +55,7 @@ const SpecialDishes = () => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 3,
-        initialSlide: 0,
+        initialSlide: 1,
         responsive: [
             {
                 breakpoint: 1024,
@@ -67,7 +67,7 @@ const SpecialDishes = () => {
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 970,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
@@ -75,7 +75,7 @@ const SpecialDishes = () => {
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 576,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -106,7 +106,7 @@ const SpecialDishes = () => {
                 </button>
             </div>
 
-            <Slider  ref={slider} {...settings}>
+            <Slider  ref={slider} {...settings}  className="overflow-hidden mt-10 space-x-5">
                 {recipes.map((item, i) => (
                     <Cards item={item} key={i} />
                 ))}
