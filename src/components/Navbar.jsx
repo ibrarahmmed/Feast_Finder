@@ -30,30 +30,48 @@ const Navbar = () => {
 
 
 
-    const navItem = <>
-        <li><a href='/'>Home</a></li>
+    const navItem =(
+        <>
         <li>
-            <details>
-                <summary>Menu</summary>
-                <ul className="p-2">
-                    <li><a>All</a></li>
-                    <li><a>Salad</a></li>
-                    <li><a>Pizza</a></li>
-                </ul>
-            </details>
+          <a className="text-green" href='/'>Home</a>
+        </li>
+        <li tabIndex={0}>
+          <details>
+            <summary>Menu</summary>
+            <ul className="p-2">
+              <li>
+                <a href="/menu">All</a>
+              </li>
+              <li>
+                <a>Salad</a>
+              </li>
+              <li>
+                <a>Pizza</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li tabIndex={0}>
+          <details>
+            <summary>Services</summary>
+            <ul className="p-2">
+              <li>
+                <a>Online Order</a>
+              </li>
+              <li>
+                <a>Table Booking</a>
+              </li>
+              <li>
+                <a>Order Tracking</a>
+              </li>
+            </ul>
+          </details>
         </li>
         <li>
-            <details>
-                <summary>Services</summary>
-                <ul className="p-2">
-                    <li><a>Online Order</a></li>
-                    <li><a>Table Booking </a></li>
-                    <li><a>Oreder Traking</a></li>
-                </ul>
-            </details>
+          <a>Offers</a>
         </li>
-        <li><a>Offers</a></li>
-    </>
+      </>
+    );
     return (
         <header className='max-w-screen-2xl container mx-auto fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out'>
             <div className={'navbar xl:px-24 ${isSticky ? "shadow-md bg-base-100 transition-all duration-300 ease-in-out":""}'}>
