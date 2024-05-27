@@ -16,18 +16,18 @@ const Menu = () => {
     useEffect(() => {
         // Fetch data from the backend
         const fetchData = async () => {
-            try {
-                const response = await fetch("/menu.json");
-                const data = await response.json();
-                setMenu(data);
-                setFilteredItems(data); // Initially, display all items
-            } catch (error) {
-                console.error("Error fetching data:", error);
-            }
+          try {
+            const response = await fetch("http://localhost:5001/menu");
+            const data = await response.json();
+            setMenu(data);
+            setFilteredItems(data); // Initially, display all items
+          } catch (error) {
+            console.error("Error fetching data:", error);
+          }
         };
-
+    
         fetchData();
-    }, []);
+      }, []);
 
     const filterItems = (category) => {
         const filtered =
