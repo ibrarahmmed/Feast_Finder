@@ -38,9 +38,9 @@ const Cards = ({ item }) => {
 
                 if(data.insertedId){
                     Swal.fire({
-                        position: "top-end",
+                        position: "center",
                         icon: "success",
-                        title: "Your work has been saved",
+                        title: "Your food has been added",
                         showConfirmButton: false,
                         timer: 1500
                       });
